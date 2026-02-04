@@ -1,0 +1,32 @@
+package org.zeeshan.patterns;
+
+public class HollowPyramid {
+//             *
+//            * *
+//           *   *
+//          *     *
+//         *********
+        public static void main(String[] args) {
+            int rows = 5; // Number of rows
+
+            // Outer loop for rows
+            for (int i = 1; i <= rows; i++) {
+                // Print leading spaces
+                for (int j = i; j < rows; j++) {
+                    System.out.print(" ");
+                }
+
+                // Print stars for boundary and spaces for hollow part
+                for (int j = 1; j <= (2 * i - 1); j++) {
+                    if (j == 1 || j == (2 * i - 1) || i == rows) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+
+                System.out.println(); // Move to the next line
+            }
+        }
+
+}
